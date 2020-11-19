@@ -1,9 +1,9 @@
 import React from 'react'
-import HomePage from './HomePage'
+import HomePage from './pages/homepage/homepage.component'
 
 function App() {
   return <div>
-          <HomePage />
+           <HomePage />
          </div>
 
 }
