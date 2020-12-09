@@ -6,7 +6,7 @@ import './cart-dropdown.styles.sass'
 
 const CartDropdown = () => (
   <div className="cart-dropdown">
-    <div classname='cart-items' />
+    <div className='cart-items' />
     <CustomButton>GO TO CHECKOUT</CustomButton>
   </div>
 )
