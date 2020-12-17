@@ -10,14 +10,13 @@ import { auth } from '../../firebase/firebase.utils'
 import CartIcon from '../cart-icon/cart-icon.component'
 import CartDropdown from '../cart-dropdown/cart-dropdown.component'
 
-/* import { ReactComponent as Logo } from '../../assets/crown.svg' */
 
 import './header.styles.sass'
 
 const Header = ({currentUser, hidden }) => (
   <div className="header">
     <Link className='logo-container' to='/'>
-      <span className="logo">HRH</span>
+      <div className='logo'/>
     </Link>
       <div className="options">
         <Link className='option' to='/shop'>
@@ -45,4 +44,5 @@ const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
   hidden: selectCartHidden
 })
+
 export default connect(mapStateToProps)(Header)
