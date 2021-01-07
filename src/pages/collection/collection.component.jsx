@@ -6,8 +6,8 @@ import { selectCollection } from '../../redux/shop/shop.selectors'
 
 import {
   CollectionPageContainer,
-  TitleContainer,
-  ItemsContainer
+  CollectionTitle,
+  CollectionItemsContainer
 } from './collection.styles'
 
 
@@ -15,14 +15,14 @@ const CollectionPage = ({ collection }) => {
   const { title, items } = collection
   return (
     <CollectionPageContainer>
-      <TitleContainer>
+      <CollectionTitle>
         {title}
-      </TitleContainer>
-      <ItemsContainer >
+      </CollectionTitle>
+      <CollectionItemsContainer >
         {items.map(item => (
           <CollectionItem key={item.id} item={item} />
         ))}
-      </ItemsContainer>
+      </CollectionItemsContainer>
     </CollectionPageContainer>
   )
 }
