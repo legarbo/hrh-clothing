@@ -9,6 +9,7 @@ import HomePage from './pages/homepage/homepage.component'
 import ShopPage from './pages/shop/shop.component'
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component'
 import CheckoutPage from './pages/checkout/checkout.component' 
+import SuccessPage from './pages/success/success.component'
 
 import Header from './components/header/header.component'
 
@@ -33,13 +34,14 @@ const App = ({ checkUserSession, currentUser}) => {
             exact
             path='/signin'
             render={() =>
-              this.props.currentUser ? (
+              currentUser ? (
                 <Redirect to='/' />
               ) : (
                 <SignInAndSignUpPage />
               )
             }
           />
+         <Route exact path='/success' component={SuccessPage} />
       </Switch>
       </div>
   )

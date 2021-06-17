@@ -51,5 +51,3 @@ export const signUpFailure = error => ({
   payload: error
 })
 
-
-
